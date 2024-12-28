@@ -1,6 +1,6 @@
 import React from 'react'
 
-const CreateTask = () => {
+const CreateTask = (props) => {
   return (
     <div>
          <div className=' py-10 rounded-l mb-4 bg-[#1c1c1c] mt-4'>
@@ -9,7 +9,7 @@ const CreateTask = () => {
                     <div className=''>
                         <h3 className='font-serif text-4xl text-blue-400 font-bold'></h3>
                         <input
-                        value={taskTitle}
+                        value={props.taskTitle}
                         onChange={(e)=>{
                             setTaskTitle(e.target.value)
                         }}
@@ -19,7 +19,7 @@ const CreateTask = () => {
                     <div>
                     <h3 className='text-2xl font-serif text-blue-400 font-bold'>Date</h3>
                     <input
-                    value={taskDate}
+                    value={props.taskDate}
                     onChange={(e)=>{
                         setTaskDate(e.target.value)
                     }}
@@ -28,7 +28,7 @@ const CreateTask = () => {
                 <div>
                     <h3 className='text-2xl text-blue-400  font-serif font-bold' >Asign to</h3>
                     <input
-                    value={asignTo}
+                    value={props.asignTo}
                     onChange={(e)=>{
                         setAsignTo(e.target.value)
                     }}
@@ -37,7 +37,7 @@ const CreateTask = () => {
                 <div>
                     <h3 className='text-2xl text-blue-400 font-serif font-bold'>Category</h3>
                     <input
-                    value={category}
+                    value={props.category}
                     onChange={(e)=>{
                         setCategory(e.target.value)
                     }}
@@ -48,7 +48,7 @@ const CreateTask = () => {
                         <div>
                         <h3 className='text-4xl pl-3 text-blue-400 font-serif font-bold' >Description</h3>
                         <textarea
-                        value={taskDescription}
+                        value={props.taskDescription}
                         onChange={(e)=>{
                             setTaskDescription(e.target.value)
                         }}
